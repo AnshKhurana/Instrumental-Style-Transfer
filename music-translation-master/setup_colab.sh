@@ -24,7 +24,7 @@ wget https://dl.fbaipublicfiles.com/music-translation/pretrained_musicnet.zip -O
 #Some python stuff
 # import gc
 #gc.collect()
-python src/garbage_collection.py
+python garbage_collection.py
 
 
 # After switching off gradients for encoder in train.py
