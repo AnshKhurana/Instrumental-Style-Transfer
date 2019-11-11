@@ -138,6 +138,11 @@ class Trainer:
         self.eval_total = LossMeter('eval total')
 
         self.encoder = Encoder(args)
+
+        # Making encoder weights stationary
+        for param in self.encoder.parameters():
+            param.requires_grad = False # Switch of parameters
+
         self.decoder = WaveNet(args)
         self.discriminator = ZDiscriminator(args)
 
