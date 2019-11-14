@@ -21,6 +21,9 @@ mkdir -p checkpoints/musicnet
 # DOWNLOAD PRE-TRAINED NETWORK
 wget https://dl.fbaipublicfiles.com/music-translation/pretrained_musicnet.zip -O checkpoints/musicnet/pretrained_musicnet.zip
 
+# Extract Table dataset to required location
+unzip Shades_Of_Tabla.zip -d musicnet/preprocessed/
+
 #Some python stuff
 # import gc
 #gc.collect()
