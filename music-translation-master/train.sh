@@ -20,7 +20,7 @@ python ${CODE}/train.py \
            ${DATA}/Bach_Solo_Piano \
            ${DATA}/Beethoven_Accompanied_Violin \
            ${DATA}/Beethoven_String_Quartet  \
-    --batch-size 32 \
+    --batch-size 2 \
     --lr-decay 0.995 \
     --epoch-len 1000 \
     --num-workers 5 \

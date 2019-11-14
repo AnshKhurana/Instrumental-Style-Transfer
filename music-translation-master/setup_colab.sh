@@ -1,9 +1,9 @@
-#git clone https://github.com/AnshKhurana/Instrumental-Style-Transfer.git
 # manual instructions - upload and run # !./setup_colab.sh
+#git clone https://username:password@github.com/AnshKhurana/Instrumental-Style-Transfer.git
+#cd Instrumental-Style-Transfer/music-translation-master/
+#git checkout 35_test
+# DON'T PUSH to this
 
-
-rm -rf sample_data/
-cd Instrumental-Style-Transfer/music-translation-master/
 pip install -r requirements.txt 1>/dev/null
 mkdir musicnet
 wget https://homes.cs.washington.edu/~thickstn/media/musicnet.tar.gz -O musicnet/musicnet.tar.gz
