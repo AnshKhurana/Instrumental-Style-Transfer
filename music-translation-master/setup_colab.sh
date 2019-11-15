@@ -1,3 +1,7 @@
+# Setup drive
+# from google.colab import drive
+# drive.mount('/content/drive')
+
 # manual instructions - upload and run # !./setup_colab.sh
 #git clone https://username:password@github.com/AnshKhurana/Instrumental-Style-Transfer.git
 # cd Instrumental-Style-Transfer/music-translation-master/
