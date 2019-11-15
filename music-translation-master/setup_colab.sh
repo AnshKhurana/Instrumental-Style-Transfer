@@ -24,7 +24,7 @@ python src/preprocess.py -i musicnet/split -o musicnet/preprocessed
 mkdir -p checkpoints/musicnet
 # DOWNLOAD PRE-TRAINED NETWORK
 wget https://dl.fbaipublicfiles.com/music-translation/pretrained_musicnet.zip -O checkpoints/musicnet/pretrained_musicnet.zip
-unzip checkpoints/musicnet/pretrained_musicnet.zip -d checkpoints/musicnet/ 1>/dev/null
+#unzip checkpoints/musicnet/pretrained_musicnet.zip -d checkpoints/musicnet/ 1>/dev/null
 
 # Rename old preprocessed directories
 mv musicnet/preprocessed/Beethoven-Solo-Piano musicnet/preprocessed/Beethoven-Solo-Piano-Old
