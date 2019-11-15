@@ -32,5 +32,5 @@ python ${CODE}/train.py \
     --layers 14 \
     --blocks 4 \
     --data-aug \
-    --grad-clip 1
-    --checkpoint "/content/drive/My Drive/checkpoints/musicnet"
+    --grad-clip 1 \
+    --checkpoint "/content/drive/My Drive/checkpoints/musicnet/bestmodel_0.pth"
