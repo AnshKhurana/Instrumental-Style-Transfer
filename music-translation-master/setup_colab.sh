@@ -23,17 +23,17 @@ for d in musicnet/parsed/*/ ; do python src/split_dir.py -i $d -o musicnet/split
 python src/preprocess.py -i musicnet/split -o musicnet/preprocessed
 mkdir -p checkpoints/musicnet
 # DOWNLOAD PRE-TRAINED NETWORK
-wget https://dl.fbaipublicfiles.com/music-translation/pretrained_musicnet.zip -O checkpoints/musicnet/pretrained_musicnet.zip
+#wget https://dl.fbaipublicfiles.com/music-translation/pretrained_musicnet.zip -O checkpoints/musicnet/pretrained_musicnet.zip
 #unzip checkpoints/musicnet/pretrained_musicnet.zip -d checkpoints/musicnet/ 1>/dev/null
 
 # Rename old preprocessed directories
-mv musicnet/preprocessed/Beethoven-Solo-Piano musicnet/preprocessed/Beethoven-Solo-Piano-Old
-mv musicnet/preprocessed/Beethoven-String-Quartet musicnet/preprocessed/Beethoven-String-Quartet-Old
+mv musicnet/preprocessed/Beethoven_Solo_Piano musicnet/preprocessed/Beethoven_Solo_Piano_Old
+mv musicnet/preprocessed/Beethoven_String_Quartet musicnet/preprocessed/Beethoven_String_Quartet_Old
 # Extract Tabla dataset to required location
 unzip Shades_Of_Tabla.zip -d musicnet/preprocessed/
-mv musicnet/preprocessed/Shades_Of_Tabla musicnet/preprocessed/Beethoven-Solo-Piano
+mv musicnet/preprocessed/Shades_Of_Tabla musicnet/preprocessed/Beethoven_Solo_Piano
 unzip Mridangam.zip -d musicnet/preprocessed
-mv musicnet/preprocessed/Mridangam musicnet/preprocessed/Beethoven-String-Quartet
+mv musicnet/preprocessed/Mridangam musicnet/preprocessed/Beethoven_String_Quartet
 
 #Some python stuff
 # import gc
