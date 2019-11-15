@@ -33,4 +33,4 @@ python ${CODE}/train.py \
     --blocks 4 \
     --data-aug \
     --grad-clip 1
-    --checkpoint checkpoints/musicnet
+    --checkpoint "/content/drive/My Drive/checkpoints/musicnet"
