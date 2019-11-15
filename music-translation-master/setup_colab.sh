@@ -1,7 +1,7 @@
 # manual instructions - upload and run # !./setup_colab.sh
 #git clone https://username:password@github.com/AnshKhurana/Instrumental-Style-Transfer.git
-#cd Instrumental-Style-Transfer/music-translation-master/
-#git checkout 35_test
+# cd Instrumental-Style-Transfer/music-translation-master/
+# git checkout anuj
 # DON'T PUSH to this
 
 pip install -r requirements.txt 1>/dev/null
@@ -20,9 +20,16 @@ python src/preprocess.py -i musicnet/split -o musicnet/preprocessed
 mkdir -p checkpoints/musicnet
 # DOWNLOAD PRE-TRAINED NETWORK
 wget https://dl.fbaipublicfiles.com/music-translation/pretrained_musicnet.zip -O checkpoints/musicnet/pretrained_musicnet.zip
+unzip checkpoints/musicnet/pretrained_musicnet.zip -d checkpoints/musicnet/ 1>/dev/null
 
-# Extract Table dataset to required location
+# Rename old preprocessed directories
+mv musicnet/preprocessed/Beethoven-Solo-Piano musicnet/preprocessed/Beethoven-Solo-Piano-Old
+mv musicnet/preprocessed/Beethoven-String-Quartet musicnet/preprocessed/Beethoven-String-Quartet-Old
+# Extract Tabla dataset to required location
 unzip Shades_Of_Tabla.zip -d musicnet/preprocessed/
+mv musicnet/preprocessed/Shades_Of_Tabla musicnet/preprocessed/Beethoven-Solo-Piano
+unzip Mridangam.zip -d musicnet/preprocessed
+mv musicnet/preprocessed/Mridangam musicnet/preprocessed/Beethoven-String-Quartet
 
 #Some python stuff
 # import gc
@@ -31,4 +38,4 @@ python garbage_collection.py
 
 
 # After switching off gradients for encoder in train.py
-#./train.sh
+./train.sh
