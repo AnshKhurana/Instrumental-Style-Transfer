@@ -119,7 +119,7 @@ class Trainer:
     def __init__(self, args):
         self.args = args
         self.args.n_datasets = len(self.args.data)
-        self.expPath = Path('/content/drive/My Drive/checkpoints') / args.expName
+        self.expPath = Path('/content/drive/My Drive/checkpoints_exp') / args.expName
 
         torch.manual_seed(args.seed)
         torch.cuda.manual_seed(args.seed)
