@@ -42,4 +42,4 @@ python garbage_collection.py
 
 
 # After switching off gradients for encoder in train.py
-./train.sh
+#./train.sh
